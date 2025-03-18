@@ -71,8 +71,8 @@ Open the file `db_connection.py` and update the connection string parameters wit
 - DATABASE: TRN
 - UID: robot
 - PWD: Vika_password123
-- ODBC Driver: The connection string uses 'ODBC Driver 17 for SQL Server' and includes additional parameters:`Encrypt=no;TrustServerCertificate=yes;` for the 18 version
-Note: If your SQL Server uses dynamic ports, update the connection settings in db_connection.py accordingly. Ensure that the port specified matches your SQL Server’s configuration.
+- ODBC Driver: The connection string uses 'ODBC Driver 17 for SQL Server' and includes additional parameters:`Encrypt=no;TrustServerCertificate=yes;` for the 18 version.
+- Note: If your SQL Server uses dynamic ports, update the connection settings in db_connection.py accordingly. Ensure that the port specified matches your SQL Server’s configuration.
 
 
 2. **SQL Server User Setup:**  
@@ -105,10 +105,10 @@ Note: If your SQL Server uses dynamic ports, update the connection settings in d
 ## Running the Tests
 - To run all tests from the project root:
    - pytest
-Note: Always run PyTest from the project root directory so that Python can correctly locate the db_connection.py module.
+   - Note: Always run PyTest from the project root directory so that Python can correctly locate the db_connection.py module.
 - To generate an HTML report, run:
    - pytest --html=output/report.html --self-contained-html
-After running the tests with pytest --html=output/report.html --self-contained-html, open output/report.html in your web browser to view the detailed test report.
+   - After running the tests with pytest --html=output/report.html --self-contained-html, open output/report.html in your web browser to view the detailed test report.
 
 ## Test Reports
 After running the tests, the following will be generated:
