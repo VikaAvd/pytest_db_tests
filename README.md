@@ -41,7 +41,7 @@ The project implements six test cases (two per table):
 - **pytest-html** (for generating an HTML report)
 - A running **Microsoft SQL Server** instance with the `TRN` database and `hr` schema.
 - The correct **ODBC Driver 17 for SQL Server** or **ODBC Driver 18 for SQL Server** installed (64-bit recommended).
-- A database login (e.g., `robot`) with appropriate permissions on the `TRN` database (more details in the 'SQL Server User Setup' section below)
+- A database login (e.g., `robot`) with appropriate permissions on the `TRN` database (more details in the `SQL Server User Setup` section below)
 
 ## Project Structure
 pytest_db_tests/
@@ -57,12 +57,12 @@ pytest_db_tests/
 
 ## Installation
 1. **Clone the Repository**  
-- 'git clone https://github.com/VikaAvd/pytest_db_tests.git'
-- 'cd pytest_db_tests'
+- `git clone https://github.com/VikaAvd/pytest_db_tests.git`
+- `cd pytest_db_tests`
 
 2. **Install Python Dependencies:** 
 Ensure you have Python installed, then run:
-- 'pip install -r requirements.txt'
+- `pip install -r requirements.txt`
 
 ## Configuration
 1. **Database Connection**
@@ -71,7 +71,7 @@ Open the file `db_connection.py` and update the connection string parameters wit
 - DATABASE: TRN
 - UID: robot
 - PWD: Vika_password123
-- ODBC Driver: The connection string uses 'ODBC Driver 17 for SQL Server' and includes additional parameters:`Encrypt=no;TrustServerCertificate=yes;` for the 18 version.
+- ODBC Driver: The connection string uses `ODBC Driver 17 for SQL Server` and includes additional parameters:`Encrypt=no;TrustServerCertificate=yes;` for the 18 version.
 - Note: If your SQL Server uses dynamic ports, update the connection settings in db_connection.py accordingly. Ensure that the port specified matches your SQL Server’s configuration.
 
 
@@ -104,11 +104,11 @@ Open the file `db_connection.py` and update the connection string parameters wit
 
 ## Running the Tests
 - To run all tests from the project root:
-   - 'pytest'
+   - `pytest`
    - Note: Always run PyTest from the project root directory so that Python can correctly locate the db_connection.py module.
 - To generate an HTML report, run:
-   - 'pytest --html=output/report.html --self-contained-html'
-   - After running the tests with 'pytest --html=output/report.html --self-contained-html', open output/report.html in your web browser to view the detailed test report.
+   - `pytest --html=output/report.html --self-contained-html`
+   - After running the tests with `pytest --html=output/report.html --self-contained-html`, open output/report.html in your web browser to view the detailed test report.
 
 ## Test Reports
 After running the tests, the following will be generated:
