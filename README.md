@@ -104,7 +104,7 @@ Open the file `db_connection.py` and update the connection string parameters wit
 
 ## Running the Tests
 - To run all tests from the project root:
-   - pytest
+   ```bash pytest```
    - Note: Always run PyTest from the project root directory so that Python can correctly locate the db_connection.py module.
 - To generate an HTML report, run:
    - pytest --html=output/report.html --self-contained-html
