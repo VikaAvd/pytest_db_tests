@@ -1,0 +1,4 @@
+# Ignores Python bytecode cache, PyTest cache, and compiled .pyc files
+__pycache__/
+.pytest_cache/
+*.pyc
