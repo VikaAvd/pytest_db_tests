@@ -1,9 +1,10 @@
 import pyodbc
 
 def get_db_connection():
-    # Adjust for your environment with your values.
-    # This connection string uses ODBC Driver 17 for SQL Server. 
-    # Extra parameters "Encrypt=no;TrustServerCertificate=yes;" are added for ODBC Driver 18 for SQL Server.
+    """
+    Adjust for your environment with your values.
+    Connection string uses ODBC Driver 17 for SQL Server, with extra parameters for Driver 18 if needed.
+    """
     conn_str = (
         "DRIVER={ODBC Driver 17 for SQL Server};"
         "SERVER=EPUALVIW059D\\SQLEXPRESS01;"
@@ -14,4 +15,6 @@ def get_db_connection():
         "TrustServerCertificate=yes;"
     )
     return pyodbc.connect(conn_str)
+
+import pyodbc
 

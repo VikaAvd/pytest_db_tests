@@ -44,16 +44,18 @@ The project implements six test cases (two per table):
 - A database login (e.g., `robot`) with appropriate permissions on the `TRN` database (more details in the `SQL Server User Setup` section below)
 
 ## Project Structure
+```bash
 pytest_db_tests/
 ├── tests/
-│   ├── test_employees.py     # Tests for the employees table
-│   ├── test_jobs.py          # Tests for the jobs table
-│   └── test_locations.py     # Tests for the locations table
-├── db_connection.py          # Contains the database connection helper function
-├── requirements.txt          # List of required Python packages
-├── README.md                 # Project instructions
-└── output/                   # Folder where test reports (e.g., HTML) are generated
-
+│   ├── conftest.py          # PyTest fixture for DB connection
+│   ├── test_employees.py    # Tests for the employees table
+│   ├── test_jobs.py         # Tests for the jobs table
+│   └── test_locations.py    # Tests for the locations table
+├── db_connection.py         # Contains the database connection helper function
+├── requirements.txt         # List of required Python packages
+├── README.md                # Project instructions
+└── output/                  # Folder where test reports (e.g., HTML) are generated
+```
 
 ## Installation
 1. **Clone the Repository**  
@@ -103,9 +105,11 @@ Open the file `db_connection.py` and update the connection string parameters wit
 - The robot login must have proper permissions on the TRN database (connect as an admin, navigate to TRN > Security > Users, right-click "robot", open Properties, and confirm in the Membership tab that db_datareader is checked).
 
 ## Running the Tests
-- To run all tests from the project root:
+- To run all tests from the project root using one of the options below:
    - `pytest`
-   - Note: Always run PyTest from the project root directory so that Python can correctly locate the db_connection.py module.
+   - `pytest -rbA`
+   - `pytest -vv`
+ 
 - To generate an HTML report, run:
    - `pytest --html=output/report.html --self-contained-html`
    - After running the tests with `pytest --html=output/report.html --self-contained-html`, open output/report.html in your web browser to view the detailed test report.
