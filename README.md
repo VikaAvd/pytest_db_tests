@@ -105,7 +105,7 @@ Open the file `db_connection.py` and update the connection string parameters wit
 - The robot login must have proper permissions on the TRN database (connect as an admin, navigate to TRN > Security > Users, right-click "robot", open Properties, and confirm in the Membership tab that db_datareader is checked).
 
 ## Running the Tests
-- To run all tests from the project root using one of the options below:
+- To run all tests from the project root use one of the options below:
    - `pytest`
    - `pytest -rbA`
    - `pytest -vv`
